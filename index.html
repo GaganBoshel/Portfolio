@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeCraft | Alex, Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <nav class="wrap">
+      <a href="#home" class="logo"><b>&lt;/&gt;</b> CodeCraft</a>
+
+      <ul class="links" id="links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="https://wa.me/9744511215" class="btn pri nav-cta">Hire Me ↗</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="wrap">
+
+      <div class="hero-text">
+        <span class="tag">I'm a web developer</span>
+        <h1>Hi, I'm <span>Gagan</span><br>I build things for the web.</h1>
+        <p class="lead">
+          I'm a passionate web developer specializing in building exceptional
+          digital experiences with modern technologies.
+        </p>
+
+        <div class="cta">
+          <a href="#projects" class="btn pri">View My Work ↗</a>
+        </div>
+
+        <div class="tech-label">Technologies I work with</div>
+        <div class="tech">
+          <div class="ti html">5</div>
+          <div class="ti css">3</div>
+          <div class="ti js">JS</div>
+          <div class="ti ts">TS</div>
+          <div class="ti react plain">⚛</div>
+          <div class="ti node plain">⬢</div>
+          <div class="ti git plain">◆</div>
+        </div>
+      </div>
+
+      <div class="photo">
+        <div class="dots"></div>
+        <div class="circle"></div>
+        <div class="portrait-frame">
+          <img class="person" src="./src/Profile.jpg" alt="Gagan" />
+        </div>
+
+        <div class="code">
+          <div class="bar"><span>&lt;/&gt; Code</span><i></i></div>
+<pre>const developer = {
+  name: <em>"Gagan"</em>,
+  skills: [<em>"HTML"</em>, <em>"CSS"</em>,
+   <em>"JavaScript"</em>, <em>"React"</em>],
+  passion: <em>"Building helpful digital experiences and hardware solutions"</em>
+};</pre>
+        </div>
+
+        <svg class="squiggle" width="50" height="80" viewBox="0 0 50 80" fill="none" stroke="#e9e9ff"
+          stroke-width="1.5" stroke-linecap="round">
+          <path d="M30 2C8 12 4 36 14 52c8 12 22 16 32 8M40 52l6 8-9 3" />
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="wrap">
+
+      <div class="reveal">
+        <span class="tag">About me</span>
+        <h2>I'm passionate about creating digital solutions</h2>
+        <p>
+          With 4+ years of experience in web development, I help businesses and
+          individuals bring their ideas to life through clean, efficient, and
+          user-friendly code.
+        </p>
+        <a href="#contact" class="btn out sm">Learn More About Me ◌</a>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat">
+          <div class="ico">
+            <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 10h16M9 3v4M15 3v4" /></svg>
+          </div>
+          <div><b data-n="4" data-s="+">4+</b><small>Years Experience</small></div>
+        </div>
+
+        <div class="stat">
+          <div class="ico dark">
+            <svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 6l-3 12" /></svg>
+          </div>
+          <div><b data-n="50" data-s="+">50+</b><small>Projects Completed</small></div>
+        </div>
+
+        <div class="stat">
+          <div class="ico dark">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M8.5 14c1 1.6 2.2 2.2 3.5 2.2s2.5-.6 3.5-2.2M9 9.5h.01M15 9.5h.01" /></svg>
+          </div>
+          <div><b data-n="30" data-s="+">30+</b><small>Happy Clients</small></div>
+        </div>
+
+        <div class="stat">
+          <div class="ico">
+            <svg viewBox="0 0 24 24"><path d="M8 4h8v6a4 4 0 01-8 0zM8 6H4v1a3 3 0 003 3M16 6h4v1a3 3 0 01-3 3M12 14v4M8 20h8" /></svg>
+          </div>
+          <div><b data-n="100" data-s="%">100%</b><small>Client Satisfaction</small></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SKILLS (filled by script.js) ============ -->
+  <section class="skills" id="skills">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">My skills</span>
+        <h2>Technologies I Master</h2>
+      </div>
+      <div class="sk-grid" id="sk"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow blue">Featured projects</span>
+        <h2>Some of My Recent Work</h2>
+      </div>
+
+      <div class="track" id="track">
+
+        <article class="card">
+          <div class="thumb thumb-purple">
+            <span class="n">01</span>
+            <img src="./src/Pocket Engine_ Your Offline AI Companion.png" alt="Pocket Engine" />
+          </div>
+          <div class="body">
+            <h3>Pocket Engine</h3>
+            <p>Pocket Engine is a full-stack offline and online AI assistant for smartphones.</p>
+            <a href="https://vethos-offline-ai-assistant.ai.studio/" class="more">View Project ⇱</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb thumb-light">
+            <span class="n">02</span>
+            <img src="./src/jumping.png" alt="Jumping Shell" />
+          </div>
+          <div class="body">
+            <h3>Jumping Shell</h3>
+            <p>Jumping Shell is a fun game where you control a shell to jump over obstacles.</p>
+            <a href="https://jumping-shell.ai.studio/" class="more">View Project ⇱</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb thumb-dark">
+            <span class="n">03</span>
+            <img src="./src/neo.jpg" alt="Neo Air Draw" />
+          </div>
+          <div class="body">
+            <h3>Neo Air Draw</h3>
+            <p>Interactive drawing application for the web</p>
+            <a href="https://air-canvas1.netlify.app/" class="more">View Project ⇱</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="pager" id="pager">
+        <button class="on" aria-label="Project 1"></button>
+        <button aria-label="Project 2"></button>
+        <button aria-label="Project 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+
+      <div class="left">
+        <span class="eyebrow blue">Let's work together</span>
+        <h2>Have a project in mind?</h2>
+        <p>
+          I'm always open to discussing new projects and opportunities.
+          Let's create something amazing together!
+        </p>
+        <a href="gaganbosel5@gmail.com" class="btn pri sm">Get In Touch ↗</a>
+      </div>
+
+      <div class="quote">
+        <div class="q">“</div>
+        <p>
+          Gagan is an exceptional developer who delivers high-quality work on time.
+          His attention to detail and problem-solving skills are outstanding.
+        </p>
+        <div class="who">
+          <div class="av"></div>
+          <div><b>Sarah Johnson</b><small>CEO, TechStart</small></div>
+        </div>
+      </div>
+
+      <div class="follow">
+        <span class="eyebrow blue">Follow me</span>
+        <div class="soc">
+          <a class="social-icon whatsapp" href="https://wa.me/9744511215" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.4 8.4 0 0 1-12.4 7.4L4 20l.8-4A8.4 8.4 0 1 1 20.5 11.8Z" /><path d="M9 8.5c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.1-.3-2.4-.9-3.8-2.2-1.1-1-2-2.4-2.2-3.4-.3-.9 0-1.5.4-2Z" /></svg>
+          </a>
+          <a class="social-icon instagram" href="https://www.instagram.com/gagan_boshel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="18" cy="6" r=".8" class="solid" /></svg>
+          </a>
+          <a class="social-icon github" href="https://github.com/GaganBoshel" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.3-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.8a5.3 5.3 0 0 0-1.4-3.7 4.9 4.9 0 0 0-.1-3.7s-1.2-.4-3.9 1.4a13.4 13.4 0 0 0-7 0C5.2.9 4 .9 4 .9a4.9 4.9 0 0 0-.1 3.7 5.3 5.3 0 0 0-1.4 3.7c0 5.3 3.2 6.5 6.2 6.8a3.4 3.4 0 0 0-.9 2.6V22" /></svg>
+          </a>
+          <a class="social-icon facebook" href="https://www.facebook.com/gagan.bosel" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4c-.4-.1-1.6-.2-3-.2-3 0-5 1.8-5 5.2V9H7v4h3v8" /></svg>
+          </a>
+        </div>
+        <p>
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>
+          gaganbosel5@gmail.com
+        </p>
+        <p>
+          <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" /></svg>
+          9744511215
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="blog">
+    <div class="wrap">
+      <span>© 2025 Gagan Developer and Hardware Specialist. All rights reserved.</span>
+      <span>Made with <span class="heart">♥</span> by Gagan</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
