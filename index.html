@@ -4,141 +4,348 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CodeCraft | Alex, Web Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Gagan | Full-Stack Web Developer & Hardware Specialist</title>
+  <meta name="description" content="Portfolio of Gagan - Full-Stack Web Developer, Hardware Specialist, and Offline AI builder. Building high-performance digital experiences.">
+
+  <!-- Google Fonts: Outfit for display, Plus Jakarta Sans for body, JetBrains Mono for code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- Ambient background glow elements -->
+  <div class="bg-spotlight" id="spotlight"></div>
+  <div class="bg-radial glow-top"></div>
+  <div class="bg-radial glow-mid"></div>
+  <div class="bg-grid-overlay"></div>
+
+  <!-- Top scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <!-- ============ HEADER ============ -->
-  <header>
+  <header id="mainHeader">
     <nav class="wrap">
-      <a href="#home" class="logo"><b>&lt;/&gt;</b> CodeCraft</a>
+      <a href="#home" class="logo">
+        <span class="logo-badge">&lt;/&gt;</span>
+        <span class="logo-text">Code<span class="highlight">Craft</span></span>
+      </a>
+
+      <div class="nav-status-badge">
+        <span class="pulse-dot"></span>
+        <span class="status-txt">Open to Work</span>
+      </div>
 
       <ul class="links" id="links">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <a href="https://wa.me/9744511215" class="btn pri nav-cta">Hire Me ↗</a>
-      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+      <div class="nav-actions">
+        <button id="cvHeaderBtn" class="btn btn-outline sm cv-trigger">Resume 📄</button>
+        <a href="https://wa.me/9744511215" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm nav-cta">
+          <span>Let's Talk</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" /></svg>
+        </a>
+        <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="home">
-    <div class="wrap">
+    <div class="wrap hero-wrap">
 
       <div class="hero-text">
-        <span class="tag">I'm a web developer</span>
-        <h1>Hi, I'm <span>Gagan</span><br>I build things for the web.</h1>
-        <p class="lead">
-          I'm a passionate web developer specializing in building exceptional
-          digital experiences with modern technologies.
-        </p>
-
-        <div class="cta">
-          <a href="#projects" class="btn pri">View My Work ↗</a>
+        <div class="hero-status-pill">
+          <span class="pulse-dot"></span>
+          <span>Available for Freelance & Full-Time Projects</span>
         </div>
 
-        <div class="tech-label">Technologies I work with</div>
-        <div class="tech">
-          <div class="ti html">5</div>
-          <div class="ti css">3</div>
-          <div class="ti js">JS</div>
-          <div class="ti ts">TS</div>
-          <div class="ti react plain">⚛</div>
-          <div class="ti node plain">⬢</div>
-          <div class="ti git plain">◆</div>
+        <h1>
+          Hi, I'm <span class="gradient-text">Gagan</span><br>
+          <span class="typed-wrapper">
+            <span class="typed-prefix">I build </span>
+            <span class="typed-text" id="typedText"></span>
+            <span class="typing-cursor">|</span>
+          </span>
+        </h1>
+
+        <p class="lead">
+          I am a passionate web developer and hardware specialist focused on crafting
+          exceptional digital experiences, offline AI companions, and performant web systems with modern technologies.
+        </p>
+
+        <div class="cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore My Work</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" /></svg>
+          </a>
+          <button id="heroCvBtn" class="btn btn-outline cv-trigger">
+            <svg class="btn-ico" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span>View Resume</span>
+          </button>
+          <a href="#contact" class="btn btn-ghost">
+            <span>Contact Me</span>
+          </a>
+        </div>
+
+        <div class="tech-strip">
+          <span class="tech-strip-title">Technologies I work with</span>
+          <div class="tech-badges">
+            <div class="tech-chip" title="React.js">
+              <span class="chip-icon react">⚛</span>
+              <span>React</span>
+            </div>
+            <div class="tech-chip" title="Next.js">
+              <span class="chip-icon next">▲</span>
+              <span>Next.js</span>
+            </div>
+            <div class="tech-chip" title="TypeScript">
+              <span class="chip-icon ts">TS</span>
+              <span>TypeScript</span>
+            </div>
+            <div class="tech-chip" title="JavaScript">
+              <span class="chip-icon js">JS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-chip" title="Tailwind CSS">
+              <span class="chip-icon tailwind">≈</span>
+              <span>Tailwind</span>
+            </div>
+            <div class="tech-chip" title="Node.js">
+              <span class="chip-icon node">⬢</span>
+              <span>Node.js</span>
+            </div>
+            <div class="tech-chip" title="Hardware & AI">
+              <span class="chip-icon ai">🤖</span>
+              <span>Offline AI & IoT</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="photo">
-        <div class="dots"></div>
-        <div class="circle"></div>
-        <div class="portrait-frame">
-          <img class="person" src="./src/Profile.jpg" alt="Gagan" />
+      <div class="hero-visual">
+        <!-- Floating ambient rings & backlights -->
+        <div class="visual-halo"></div>
+        <div class="orbital-ring"></div>
+        <div class="dots-pattern"></div>
+
+        <!-- Floating Badge 1: Experience -->
+        <div class="floating-badge badge-exp">
+          <div class="badge-icon-box purple">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <b>4+ Years</b>
+            <small>Coding Experience</small>
+          </div>
         </div>
 
-        <div class="code">
-          <div class="bar"><span>&lt;/&gt; Code</span><i></i></div>
-<pre>const developer = {
-  name: <em>"Gagan"</em>,
-  skills: [<em>"HTML"</em>, <em>"CSS"</em>,
-   <em>"JavaScript"</em>, <em>"React"</em>],
-  passion: <em>"Building helpful digital experiences and hardware solutions"</em>
-};</pre>
+        <!-- Floating Badge 2: Projects -->
+        <div class="floating-badge badge-proj">
+          <div class="badge-icon-box cyan">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <b>50+ Projects</b>
+            <small>Built & Shipped</small>
+          </div>
         </div>
 
-        <svg class="squiggle" width="50" height="80" viewBox="0 0 50 80" fill="none" stroke="#e9e9ff"
-          stroke-width="1.5" stroke-linecap="round">
-          <path d="M30 2C8 12 4 36 14 52c8 12 22 16 32 8M40 52l6 8-9 3" />
-        </svg>
+        <!-- Portrait Frame -->
+        <div class="portrait-container">
+          <div class="portrait-glow-border">
+            <img class="person-photo" src="./src/Profile.jpg" alt="Gagan - Web Developer and Hardware Specialist" />
+          </div>
+        </div>
+
+        <!-- Realistic Glass Code Card -->
+        <div class="code-card">
+          <div class="code-header">
+            <div class="traffic-lights">
+              <span class="light red"></span>
+              <span class="light yellow"></span>
+              <span class="light green"></span>
+            </div>
+            <span class="code-title">gagan.config.ts</span>
+            <span class="code-lang">TS</span>
+          </div>
+          <pre class="code-body"><code><span class="tok-kw">const</span> <span class="tok-var">developer</span> = {
+  <span class="tok-prop">name</span>: <span class="tok-str">"Gagan"</span>,
+  <span class="tok-prop">role</span>: <span class="tok-str">"Full-Stack & Hardware Dev"</span>,
+  <span class="tok-prop">skills</span>: [<span class="tok-str">"React"</span>, <span class="tok-str">"TS"</span>, <span class="tok-str">"Node"</span>, <span class="tok-str">"AI"</span>],
+  <span class="tok-prop">mission</span>: <span class="tok-str">"Building impactful tech"</span>,
+  <span class="tok-prop">status</span>: <span class="tok-bool">true</span> <span class="tok-com">// Ready to build</span>
+};</code></pre>
+        </div>
+
       </div>
 
     </div>
   </section>
+
+  <!-- ============ INFINITE TECH MARQUEE ============ -->
+  <div class="marquee-container" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item"><span class="m-dot">✦</span> REACT.JS</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> TYPESCRIPT</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> NEXT.JS</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> NODE.JS</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> TAILWIND CSS</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> OFFLINE AI</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> HARDWARE & IOT</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> CANVAS API</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> RESTFUL APIS</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> GIT & GITHUB</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> RESPONSIVE UI/UX</div>
+      <!-- Duplicate for seamless infinite loop -->
+      <div class="marquee-item"><span class="m-dot">✦</span> REACT.JS</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> TYPESCRIPT</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> NEXT.JS</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> NODE.JS</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> TAILWIND CSS</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> OFFLINE AI</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> HARDWARE & IOT</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> CANVAS API</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> RESTFUL APIS</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> GIT & GITHUB</div>
+      <div class="marquee-item"><span class="m-dot">✦</span> RESPONSIVE UI/UX</div>
+    </div>
+  </div>
 
   <!-- ============ ABOUT ============ -->
   <section class="about" id="about">
-    <div class="wrap">
+    <div class="wrap about-wrap">
 
-      <div class="reveal">
-        <span class="tag">About me</span>
-        <h2>I'm passionate about creating digital solutions</h2>
-        <p>
-          With 4+ years of experience in web development, I help businesses and
-          individuals bring their ideas to life through clean, efficient, and
-          user-friendly code.
+      <div class="about-content reveal">
+        <div class="section-tag">
+          <span class="tag-icon">⚡</span>
+          <span>About Me</span>
+        </div>
+        <h2>Bridging Clean Code with Practical Hardware & AI Solutions</h2>
+        <p class="about-desc">
+          With over 4 years of hands-on experience, I specialize in engineering responsive web applications,
+          offline AI assistants, and hardware-integrated software. I love tackling complex technical challenges
+          and transforming visionary concepts into elegant, intuitive products.
         </p>
-        <a href="#contact" class="btn out sm">Learn More About Me ◌</a>
+
+        <div class="about-features">
+          <div class="feat-item">
+            <span class="feat-check">✓</span>
+            <div>
+              <strong>Modern Frontend Architecture</strong>
+              <small>React, TypeScript, Next.js, and sleek animations</small>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-check">✓</span>
+            <div>
+              <strong>Smart Offline AI & Tooling</strong>
+              <small>Privacy-first on-device AI applications</small>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-check">✓</span>
+            <div>
+              <strong>Hardware Prototyping & IoT</strong>
+              <small>Interfacing embedded devices with web controllers</small>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-check">✓</span>
+            <div>
+              <strong>Speed & Performance Mindset</strong>
+              <small>Fast loading times, clean architecture & SEO</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-actions">
+          <a href="#contact" class="btn btn-primary sm">Let's Work Together ↗</a>
+          <button class="btn btn-outline sm cv-trigger">View CV 📄</button>
+        </div>
       </div>
 
-      <div class="stats reveal">
-        <div class="stat">
-          <div class="ico">
-            <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M4 10h16M9 3v4M15 3v4" /></svg>
+      <div class="about-stats-grid reveal">
+        <div class="glass-stat-card">
+          <div class="stat-icon-wrap violet">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <div><b data-n="4" data-s="+">4+</b><small>Years Experience</small></div>
+          <div class="stat-info">
+            <b data-n="4" data-s="+">0</b>
+            <span>Years Experience</span>
+            <small>Active web & tech development</small>
+          </div>
         </div>
 
-        <div class="stat">
-          <div class="ico dark">
-            <svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 6l-3 12" /></svg>
+        <div class="glass-stat-card">
+          <div class="stat-icon-wrap cyan">
+            <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-          <div><b data-n="50" data-s="+">50+</b><small>Projects Completed</small></div>
+          <div class="stat-info">
+            <b data-n="50" data-s="+">0</b>
+            <span>Projects Completed</span>
+            <small>Web apps, games & AI tools</small>
+          </div>
         </div>
 
-        <div class="stat">
-          <div class="ico dark">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M8.5 14c1 1.6 2.2 2.2 3.5 2.2s2.5-.6 3.5-2.2M9 9.5h.01M15 9.5h.01" /></svg>
+        <div class="glass-stat-card">
+          <div class="stat-icon-wrap emerald">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <div><b data-n="30" data-s="+">30+</b><small>Happy Clients</small></div>
+          <div class="stat-info">
+            <b data-n="30" data-s="+">0</b>
+            <span>Happy Clients</span>
+            <small>Across remote collaborations</small>
+          </div>
         </div>
 
-        <div class="stat">
-          <div class="ico">
-            <svg viewBox="0 0 24 24"><path d="M8 4h8v6a4 4 0 01-8 0zM8 6H4v1a3 3 0 003 3M16 6h4v1a3 3 0 01-3 3M12 14v4M8 20h8" /></svg>
+        <div class="glass-stat-card">
+          <div class="stat-icon-wrap amber">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <div><b data-n="100" data-s="%">100%</b><small>Client Satisfaction</small></div>
+          <div class="stat-info">
+            <b data-n="100" data-s="%">0</b>
+            <span>Satisfaction Rate</span>
+            <small>Dedication to project excellence</small>
+          </div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ============ SKILLS (filled by script.js) ============ -->
+  <!-- ============ SKILLS ============ -->
   <section class="skills" id="skills">
     <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">My skills</span>
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="tag-icon">⚡</span>
+          <span>Technical Expertise</span>
+        </div>
         <h2>Technologies I Master</h2>
+        <p class="section-sub">A powerful and versatile technology stack tailored for building robust software.</p>
+
+        <!-- Category filter pills -->
+        <div class="skills-filter" id="skillsFilter">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend & Logic</button>
+          <button class="filter-btn" data-filter="tools">Hardware & Tools</button>
+        </div>
       </div>
+
       <div class="sk-grid" id="sk"></div>
     </div>
   </section>
@@ -146,46 +353,107 @@
   <!-- ============ PROJECTS ============ -->
   <section class="projects" id="projects">
     <div class="wrap">
-      <div class="head">
-        <span class="eyebrow blue">Featured projects</span>
-        <h2>Some of My Recent Work</h2>
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="tag-icon">🚀</span>
+          <span>Featured Work</span>
+        </div>
+        <h2>Selected Projects & Creations</h2>
+        <p class="section-sub">Real-world applications and interactive experiences built with modern stacks.</p>
       </div>
 
-      <div class="track" id="track">
+      <div class="projects-grid" id="track">
 
-        <article class="card">
-          <div class="thumb thumb-purple">
-            <span class="n">01</span>
-            <img src="./src/Pocket Engine_ Your Offline AI Companion.png" alt="Pocket Engine" />
+        <!-- Project 1: Pocket Engine -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <span class="project-num">01</span>
+            <div class="project-cat-badge">AI & Mobile</div>
+            <img src="./src/Pocket Engine_ Your Offline AI Companion.png" alt="Pocket Engine - Offline AI Companion" loading="lazy" />
+            <div class="project-thumb-overlay">
+              <a href="https://vethos-offline-ai-assistant.ai.studio/" target="_blank" rel="noopener noreferrer" class="thumb-link-btn">
+                <span>View Live Demo</span>
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="body">
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="p-tag">React</span>
+              <span class="p-tag">Offline AI</span>
+              <span class="p-tag">AI Studio</span>
+              <span class="p-tag">Mobile Web</span>
+            </div>
             <h3>Pocket Engine</h3>
-            <p>Pocket Engine is a full-stack offline and online AI assistant for smartphones.</p>
-            <a href="https://vethos-offline-ai-assistant.ai.studio/" class="more">View Project ⇱</a>
+            <p>A full-stack offline and online AI assistant for smartphones, delivering privacy-first intelligent features directly to users with zero cloud delay.</p>
+            <div class="project-footer">
+              <a href="https://vethos-offline-ai-assistant.ai.studio/" target="_blank" rel="noopener noreferrer" class="project-cta">
+                <span>Live Project</span>
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card">
-          <div class="thumb thumb-light">
-            <span class="n">02</span>
-            <img src="./src/jumping.png" alt="Jumping Shell" />
+        <!-- Project 2: Jumping Shell -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <span class="project-num">02</span>
+            <div class="project-cat-badge">HTML5 Game</div>
+            <img src="./src/jumping.png" alt="Jumping Shell Game" loading="lazy" />
+            <div class="project-thumb-overlay">
+              <a href="https://jumping-shell.ai.studio/" target="_blank" rel="noopener noreferrer" class="thumb-link-btn">
+                <span>Play Game</span>
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="body">
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="p-tag">JavaScript</span>
+              <span class="p-tag">HTML5 Canvas</span>
+              <span class="p-tag">Physics Engine</span>
+              <span class="p-tag">Game Logic</span>
+            </div>
             <h3>Jumping Shell</h3>
-            <p>Jumping Shell is a fun game where you control a shell to jump over obstacles.</p>
-            <a href="https://jumping-shell.ai.studio/" class="more">View Project ⇱</a>
+            <p>An engaging interactive arcade game where players navigate a shell across dynamic obstacle terrain, built with custom physics and fluid frame rendering.</p>
+            <div class="project-footer">
+              <a href="https://jumping-shell.ai.studio/" target="_blank" rel="noopener noreferrer" class="project-cta">
+                <span>Play Game</span>
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card">
-          <div class="thumb thumb-dark">
-            <span class="n">03</span>
-            <img src="./src/neo.jpg" alt="Neo Air Draw" />
+        <!-- Project 3: Neo Air Draw -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <span class="project-num">03</span>
+            <div class="project-cat-badge">Computer Vision</div>
+            <img src="./src/neo.jpg" alt="Neo Air Draw - Interactive Canvas" loading="lazy" />
+            <div class="project-thumb-overlay">
+              <a href="https://air-canvas1.netlify.app/" target="_blank" rel="noopener noreferrer" class="thumb-link-btn">
+                <span>Launch Canvas</span>
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="body">
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="p-tag">Webcam Vision</span>
+              <span class="p-tag">Gesture Tracking</span>
+              <span class="p-tag">Canvas API</span>
+              <span class="p-tag">Netlify</span>
+            </div>
             <h3>Neo Air Draw</h3>
-            <p>Interactive drawing application for the web</p>
-            <a href="https://air-canvas1.netlify.app/" class="more">View Project ⇱</a>
+            <p>Futuristic touchless digital drawing application allowing users to paint in mid-air using real-time webcam gesture detection and color canvas tools.</p>
+            <div class="project-footer">
+              <a href="https://air-canvas1.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-cta">
+                <span>Launch App</span>
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -199,68 +467,215 @@
     </div>
   </section>
 
+  <!-- ============ TESTIMONIAL ============ -->
+  <section class="testimonial-section">
+    <div class="wrap">
+      <div class="testimonial-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="quote-sign">“</div>
+        <p class="testi-text">
+          Gagan is an exceptional developer who consistently delivers high-quality work with remarkable speed.
+          His attention to detail, proactive problem solving, and ability to handle both software and hardware challenges make him a true standout.
+        </p>
+        <div class="testi-author">
+          <div class="author-avatar">SJ</div>
+          <div class="author-meta">
+            <b>Sarah Johnson</b>
+            <small>CEO, TechStart Innovations</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CONTACT ============ -->
   <section class="contact" id="contact">
-    <div class="wrap">
+    <div class="wrap contact-wrap">
 
-      <div class="left">
-        <span class="eyebrow blue">Let's work together</span>
-        <h2>Have a project in mind?</h2>
-        <p>
-          I'm always open to discussing new projects and opportunities.
-          Let's create something amazing together!
+      <!-- Left Column: Details & Socials -->
+      <div class="contact-info reveal">
+        <div class="section-tag">
+          <span class="tag-icon">✉</span>
+          <span>Get in Touch</span>
+        </div>
+        <h2>Have a project in mind?<br><span class="gradient-text">Let's create together.</span></h2>
+        <p class="contact-desc">
+          I'm always excited to collaborate on new ideas, freelance development, hardware experiments, or full-time opportunities.
+          Drop a message or reach out directly!
         </p>
-        <a href="gaganbosel5@gmail.com" class="btn pri sm">Get In Touch ↗</a>
-      </div>
 
-      <div class="quote">
-        <div class="q">“</div>
-        <p>
-          Gagan is an exceptional developer who delivers high-quality work on time.
-          His attention to detail and problem-solving skills are outstanding.
-        </p>
-        <div class="who">
-          <div class="av"></div>
-          <div><b>Sarah Johnson</b><small>CEO, TechStart</small></div>
+        <!-- Direct Contact Cards -->
+        <div class="direct-contact-cards">
+
+          <!-- Email card with instant copy -->
+          <div class="direct-card email-card">
+            <div class="d-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div class="d-details">
+              <small>Email Address</small>
+              <a href="mailto:gaganbosel5@gmail.com" class="d-val">gaganbosel5@gmail.com</a>
+            </div>
+            <button class="copy-btn" id="copyEmailBtn" title="Copy email address" aria-label="Copy Email">
+              <svg class="copy-icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+
+          <!-- Phone / WhatsApp card -->
+          <div class="direct-card">
+            <div class="d-icon whatsapp-ico">
+              <svg viewBox="0 0 24 24"><path d="M20.5 11.8a8.4 8.4 0 0 1-12.4 7.4L4 20l.8-4A8.4 8.4 0 1 1 20.5 11.8Z"/><path d="M9 8.5c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.1-.3-2.4-.9-3.8-2.2-1.1-1-2-2.4-2.2-3.4-.3-.9 0-1.5.4-2Z"/></svg>
+            </div>
+            <div class="d-details">
+              <small>WhatsApp & Phone</small>
+              <a href="https://wa.me/9744511215" target="_blank" rel="noopener noreferrer" class="d-val">+977 9744511215</a>
+            </div>
+            <a href="https://wa.me/9744511215" target="_blank" rel="noopener noreferrer" class="chat-btn" title="Chat on WhatsApp">
+              <span>Chat</span>
+            </a>
+          </div>
+
+          <!-- Location card -->
+          <div class="direct-card">
+            <div class="d-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+            </div>
+            <div class="d-details">
+              <small>Location & Work</small>
+              <span class="d-val">Kathmandu, Nepal (Open to Remote Worldwide)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Social Media Profiles -->
+        <div class="social-wrapper">
+          <span class="soc-label">Find me on social channels</span>
+          <div class="soc-icons">
+            <a class="social-chip whatsapp" href="https://wa.me/9744511215" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M20.5 11.8a8.4 8.4 0 0 1-12.4 7.4L4 20l.8-4A8.4 8.4 0 1 1 20.5 11.8Z"/><path d="M9 8.5c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.1-.3-2.4-.9-3.8-2.2-1.1-1-2-2.4-2.2-3.4-.3-.9 0-1.5.4-2Z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a class="social-chip github" href="https://github.com/GaganBoshel" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.3-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.8a5.3 5.3 0 0 0-1.4-3.7 4.9 4.9 0 0 0-.1-3.7s-1.2-.4-3.9 1.4a13.4 13.4 0 0 0-7 0C5.2.9 4 .9 4 .9a4.9 4.9 0 0 0-.1 3.7 5.3 5.3 0 0 0-1.4 3.7c0 5.3 3.2 6.5 6.2 6.8a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="social-chip instagram" href="https://www.instagram.com/gagan_boshel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r=".8" class="solid"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a class="social-chip facebook" href="https://www.facebook.com/gagan.bosel" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4c-.4-.1-1.6-.2-3-.2-3 0-5 1.8-5 5.2V9H7v4h3v8"/></svg>
+              <span>Facebook</span>
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="follow">
-        <span class="eyebrow blue">Follow me</span>
-        <div class="soc">
-          <a class="social-icon whatsapp" href="https://wa.me/9744511215" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.4 8.4 0 0 1-12.4 7.4L4 20l.8-4A8.4 8.4 0 1 1 20.5 11.8Z" /><path d="M9 8.5c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.1-.3-2.4-.9-3.8-2.2-1.1-1-2-2.4-2.2-3.4-.3-.9 0-1.5.4-2Z" /></svg>
-          </a>
-          <a class="social-icon instagram" href="https://www.instagram.com/gagan_boshel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="18" cy="6" r=".8" class="solid" /></svg>
-          </a>
-          <a class="social-icon github" href="https://github.com/GaganBoshel" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.3-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.8a5.3 5.3 0 0 0-1.4-3.7 4.9 4.9 0 0 0-.1-3.7s-1.2-.4-3.9 1.4a13.4 13.4 0 0 0-7 0C5.2.9 4 .9 4 .9a4.9 4.9 0 0 0-.1 3.7 5.3 5.3 0 0 0-1.4 3.7c0 5.3 3.2 6.5 6.2 6.8a3.4 3.4 0 0 0-.9 2.6V22" /></svg>
-          </a>
-          <a class="social-icon facebook" href="https://www.facebook.com/gagan.bosel" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4c-.4-.1-1.6-.2-3-.2-3 0-5 1.8-5 5.2V9H7v4h3v8" /></svg>
-          </a>
+      <!-- Right Column: Interactive Quick Message Form -->
+      <div class="contact-form-card reveal">
+        <div class="form-header">
+          <h3>Send a Quick Message</h3>
+          <p>Fill out the fields below to start a conversation directly.</p>
         </div>
-        <p>
-          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>
-          gaganbosel5@gmail.com
-        </p>
-        <p>
-          <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" /></svg>
-          9744511215
-        </p>
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project, timeline, or idea..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit-btn" id="submitBtn">
+            <span>Send Message</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
       </div>
 
     </div>
   </section>
 
   <!-- ============ FOOTER ============ -->
-  <footer id="blog">
-    <div class="wrap">
-      <span>© 2025 Gagan Developer and Hardware Specialist. All rights reserved.</span>
-      <span>Made with <span class="heart">♥</span> by Gagan</span>
+  <footer>
+    <div class="wrap footer-wrap">
+      <div class="footer-brand">
+        <a href="#home" class="logo sm">
+          <span class="logo-badge">&lt;/&gt;</span>
+          <span class="logo-text">Code<span class="highlight">Craft</span></span>
+        </a>
+        <p class="footer-desc">Crafted with precision by Gagan. Full-Stack Developer & Hardware Specialist.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025–2026 Gagan. All rights reserved.</span>
+        <span>Built with passion & <span class="heart-pulse">♥</span></span>
+      </div>
     </div>
   </footer>
+
+  <!-- ============ FLOATING BACK TO TOP BUTTON ============ -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ============ RESUME / CV MODAL ============ -->
+  <div class="modal-backdrop" id="cvModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeCvModal" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <div class="modal-icon">📄</div>
+        <div>
+          <h3>Gagan's Professional Resume</h3>
+          <p>Full-Stack Web Developer & Hardware Specialist</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="cv-summary-block">
+          <h4>Profile Summary</h4>
+          <p>Dedicated engineer with 4+ years of expertise spanning modern JavaScript/TypeScript ecosystems (React, Next.js, Node.js), offline AI applications, and hardware-software IoT integrations.</p>
+        </div>
+        <div class="cv-meta-grid">
+          <div><strong>Location:</strong> Kathmandu, Nepal</div>
+          <div><strong>Experience:</strong> 4+ Years</div>
+          <div><strong>Email:</strong> gaganbosel5@gmail.com</div>
+          <div><strong>Phone:</strong> +977 9744511215</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="mailto:gaganbosel5@gmail.com?subject=Resume%20Inquiry%20-%20Gagan" class="btn btn-outline sm">Request Full CV via Email</a>
+        <a href="https://wa.me/9744511215?text=Hi%20Gagan,%20I%20would%20like%20to%20view%20your%20CV" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm">Message on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" id="toast"></div>
 
   <script src="script.js"></script>
 </body>
